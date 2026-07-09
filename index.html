@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle English Dictionary — Расширение для Chrome</title>
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/icons/icon128.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/images/icons/icon48.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/icon16.png">
+  <meta name="description" content="Неофициальное расширение для добавления слов в словарь Puzzle English. Сохраняйте слова и фразы для изучения без открытия сайта.">
+  <meta name="keywords" content="Puzzle English, словарь, расширение Chrome, изучение английского, добавление слов">
+  <meta property="og:title" content="Puzzle English Dictionary — Расширение для Chrome">
+  <meta property="og:description" content="Сохраняйте слова в словарь Puzzle English для дальнейшего изучения без необходимости открытия сайта.">
+  <meta property="og:image" content="assets/images/icons/icon128.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="#" class="nav-brand">
+        <img src="assets/images/icons/icon48.png" alt="Puzzle English Dictionary">
+        PE Dictionary
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Возможности</a></li>
+        <li><a href="#how-it-works">Как это работает</a></li>
+        <li><a href="#screenshots">Скриншоты</a></li>
+        <li><a href="#privacy">Конфиденциальность</a></li>
+        <li><a href="https://github.com/rodewitsch/puzzle-english-dictionary" target="_blank">GitHub</a></li>
+        <li><a id="installNav" href="https://chromewebstore.google.com/detail/puzzle-english-dictionary/gjaleekpebchkichhnhjollkhhkhpcgp" target="_blank" class="nav-cta">Установить</a></li>
+      </ul>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <div>
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span id="heroBadgeText">Доступно в Chrome Web Store</span>
+        </div>
+        <h1>
+          Добавляйте слова в<br>
+          <span>Puzzle English</span>
+        </h1>
+        <p>
+          Неофициальное расширение для быстрого добавления слов и фраз в словарь Puzzle English. 
+          Нашли незнакомое слово? Сохраните его прямо из браузера — без открытия сайта.
+        </p>
+        <div class="hero-buttons">
+          <a id="installHero" href="https://chromewebstore.google.com/detail/puzzle-english-dictionary/gjaleekpebchkichhnhjollkhhkhpcgp" target="_blank" class="btn btn-green">
+            Установить расширение
+          </a>
+          <a href="https://github.com/rodewitsch/puzzle-english-dictionary" target="_blank" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            Исходный код
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">Бесплатно</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">Chrome + Firefox</span>
+            <span class="stat-label">Кроссплатформенно</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-logo">
+          <div class="hero-logo-ring"></div>
+          <img src="assets/images/icons/icon128.png" alt="Puzzle English Dictionary">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Возможности</span>
+        <h2 class="section-title">Всё для удобного изучения слов</h2>
+        <p class="section-subtitle mx-auto">
+          Пополняйте свой словарный запас не отвлекаясь от просмотра веб-страниц.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <h3>Добавление через иконку</h3>
+          <p>Нажмите на иконку расширения и введите слово или фразу. Мгновенно сохраняйте в свой словарь Puzzle English.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+          </div>
+          <h3>Контекстное меню</h3>
+          <p>Выделите любое слово на странице, нажмите правой кнопкой мыши и выберите "Добавить в Puzzle English". Быстро и удобно.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Окно предпросмотра</h3>
+          <p>Перед добавлением вы увидите перевод, транскрипцию и альтернативные варианты. Убедитесь, что сохраняете нужное значение.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Выбор перевода</h3>
+          <p>Если слово имеет несколько значений, выберите подходящий вариант перевода перед сохранением в словарь.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 8 14 2 18 6 11 5"/><path d="M10.1 6.8l3.9 3.2"/><path d="M6 9l-2.5 7.5c-.3.8.2 1.6 1 1.9.8.3 1.6-.2 1.9-1L9 14"/><path d="M14 10l5.8 3.3c.7.4 1 1.3.6 2.1-.4.7-1.3 1-2.1.6L14 14"/></svg>
+          </div>
+          <h3>Прослушивание произношения</h3>
+          <p>Прослушайте, как правильно произносится слово — как в обычном, так и в замедленном темпе, чтобы лучше запомнить.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="12" y1="6" x2="12" y2="12"/><line x1="9" y1="9" x2="15" y2="9"/></svg>
+          </div>
+          <h3>Добавление списком</h3>
+          <p>Импортируйте сразу несколько слов и фраз — каждое с новой строки. Расширение само найдёт перевод для каждого.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How It Works ===== -->
+  <section class="section" id="how-it-works" style="background: #fff;">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Как это работает</span>
+        <h2 class="section-title">Три простых шага</h2>
+        <p class="section-subtitle mx-auto">
+          Сохранять новые слова в словарь Puzzle English теперь ещё проще.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Выделите слово</h4>
+          <p>Найдите незнакомое слово на любой веб-странице и выделите его мышкой.</p>
+        </div>
+        <div class="step-arrow">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>Выберите "Добавить"</h4>
+          <p>Нажмите правой кнопкой мыши и выберите "Добавить в Puzzle English" или используйте иконку расширения.</p>
+        </div>
+        <div class="step-arrow">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Сохраните в словарь</h4>
+          <p>Проверьте перевод, выберите подходящее значение и нажмите "Добавить". Слово сохранится в ваш словарь на Puzzle English.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Screenshots ===== -->
+  <section class="section" id="screenshots">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Скриншоты</span>
+        <h2 class="section-title">Как выглядит расширение</h2>
+        <p class="section-subtitle mx-auto">
+          Наглядные примеры работы расширения на различных сайтах.
+        </p>
+      </div>
+
+      <div class="screenshots-grid">
+        <div class="screenshot-card">
+          <img src="https://user-images.githubusercontent.com/16050840/95647216-4d3c2b00-0ad6-11eb-8f7c-c3463c380aaf.jpg" alt="Добавление слова через контекстное меню" loading="lazy">
+          <div class="caption">
+            <h4>Контекстное меню</h4>
+            <p>Выделите слово на любой странице и добавьте его через контекстное меню правой кнопки мыши.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <img src="https://user-images.githubusercontent.com/16050840/95647207-3f86a580-0ad6-11eb-9c09-ad21207fa9f0.jpg" alt="Окно предпросмотра с переводом" loading="lazy">
+          <div class="caption">
+            <h4>Предпросмотр перевода</h4>
+            <p>Перед добавлением отображается перевод, транскрипция, произношение и альтернативные варианты.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <img src="https://user-images.githubusercontent.com/16050840/95647210-431a2c80-0ad6-11eb-89c0-0dac474259ad.jpg" alt="Прослушивание произношения" loading="lazy">
+          <div class="caption">
+            <h4>Произношение</h4>
+            <p>Прослушайте произношение слова в обычном и замедленном темпе, чтобы лучше запомнить звучание.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <!-- <img src="https://user-images.githubusercontent.com/16050840/95647212-46adb380-0ad6-11eb-8992-54249674cddd.jpg" alt="Альтернативные переводы" loading="lazy"> -->
+          <img src="https://user-images.githubusercontent.com/16050840/95647217-50cfb200-0ad6-11eb-88df-b70759a7fa04.jpg" alt="Выбор значения" loading="lazy">
+          <div class="caption">
+            <h4>Выбор значения</h4>
+            <p>Если у слова несколько значений, выберите наиболее подходящий вариант перевода.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <!-- <img src="https://user-images.githubusercontent.com/16050840/95647216-4d3c2b00-0ad6-11eb-8f7c-c3463c380aaf.jpg" alt="Добавление списком" loading="lazy"> -->
+           <img src="https://user-images.githubusercontent.com/16050840/95647212-46adb380-0ad6-11eb-8992-54249674cddd.jpg" alt="Добавление списком" loading="lazy">
+          <div class="caption">
+            <h4>Добавление списком</h4>
+            <p>Импортируйте несколько слов одновременно — каждое слово с новой строки.</p>
+          </div>
+        </div>
+
+        <div class="screenshot-card">
+          <img src="https://user-images.githubusercontent.com/16050840/95647206-38f82e00-0ad6-11eb-8f1c-821773ae0109.jpg" alt="Иконка" loading="lazy">
+          <div class="caption">
+            <h4>Словарь и настройки</h4>
+            <p>Управляйте своим словарём и настраивайте расширение под свои нужды.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Privacy ===== -->
+  <section class="section" id="privacy" style="background: #fff;">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Конфиденциальность</span>
+        <h2 class="section-title">Ваши данные под контролем</h2>
+        <p class="section-subtitle mx-auto">
+          Расширение работает прозрачно и безопасно.
+        </p>
+      </div>
+
+      <div class="privacy-box">
+        <div class="privacy-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div>
+          <h3>Безопасное взаимодействие с Puzzle English</h3>
+          <p>
+            Расширение взаимодействует напрямую с официальным API Puzzle English только для добавления слов в ваш словарь. 
+            Никакие данные не передаются третьим лицам. Расширение не собирает аналитику, не отслеживает вашу активность 
+            и не хранит личную информацию. Исходный код полностью открыт и доступен для проверки на GitHub.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <span class="section-label" style="background: var(--pe-blue-bg); color: var(--pe-blue);">Начать</span>
+      <h2 class="section-title">Установите бесплатно</h2>
+      <p class="section-subtitle mx-auto" style="color: var(--slate-400);">
+        <span id="ctaDescription">Расширение полностью бесплатно. Установите его из Chrome Web Store и начните пополнять свой словарный запас.</span>
+      </p>
+      <div class="cta-buttons">
+        <a id="installCta" href="https://chromewebstore.google.com/detail/puzzle-english-dictionary/gjaleekpebchkichhnhjollkhhkhpcgp" target="_blank" class="btn btn-green">
+          <span id="ctaButtonText">Установить из Chrome Web Store</span>
+        </a>
+        <a href="https://github.com/rodewitsch/puzzle-english-dictionary" target="_blank" class="btn btn-secondary" style="background: transparent; border-color: rgba(255,255,255,0.15); color: #fff;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          Исходный код
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/images/icons/icon48.png" alt="Puzzle English Dictionary">
+          Puzzle English Dictionary
+        </div>
+        <p>
+          Неофициальное расширение для добавления слов в словарь Puzzle English. 
+          Сохраняйте слова для изучения без открытия сайта.
+        </p>
+        <p style="margin-top: 12px;">
+          <a href="https://github.com/rodewitsch/puzzle-english-dictionary/blob/master/LICENSE" target="_blank" style="display: inline;">MIT License</a>
+          &mdash; Бесплатно и с открытым исходным кодом.
+        </p>
+      </div>
+      <div>
+        <h4>Ссылки</h4>
+        <a href="https://chromewebstore.google.com/detail/puzzle-english-dictionary/gjaleekpebchkichhnhjollkhhkhpcgp" target="_blank">Chrome Web Store</a>
+        <a href="https://addons.mozilla.org/firefox/addon/puzzle-english-dict-unofficial/" target="_blank">Firefox Add-ons</a>
+        <a href="https://github.com/rodewitsch/puzzle-english-dictionary" target="_blank">GitHub</a>
+        <a href="#features">Возможности</a>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a href="https://github.com/rodewitsch" target="_blank">Автор (rodewitsch)</a>
+        <a href="https://github.com/rodewitsch/puzzle-english-dictionary/issues" target="_blank">Сообщить об ошибке</a>
+        <a href="https://puzzle-english.com" target="_blank">Puzzle English</a>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Puzzle English Dictionary. Open source under MIT License.  
+        Неофициальное расширение, не связано с Puzzle English.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Go to Top Button ===== -->
+  <button id="goToTop" class="go-to-top" aria-label="Наверх">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
